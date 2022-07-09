@@ -88,6 +88,14 @@
   </a-layout>
 </template>
 
+<script>
+export default {
+  methods: {
+    onSearch(value) {},
+  },
+}
+</script>
+
 <style lang="scss">
 #components-layout-demo-top-side {
   .logo {
