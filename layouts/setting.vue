@@ -17,7 +17,7 @@
           </span>
           <NuxtLink to="/account">
             <a-icon type="user" />
-            Peter Tan
+            Peter Song
           </NuxtLink>
         </a-col>
       </a-row>
