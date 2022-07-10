@@ -52,6 +52,12 @@ export default {
   pwa: {
     manifest: {
       lang: 'en',
+      name: "demo ",
+      short_name: "demo",
+      theme_color: "#4f46e5",
+      start_url: "/",
+      display: "standalone",
+      background_color: "#4f46e5"
     },
   },
 
