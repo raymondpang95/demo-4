@@ -62,7 +62,24 @@
         <div class="product-list p-2">
           <a-card title="Product Name" :bordered="true">
             <a-row>
-              <a-col :span="4">
+              <a-col :xs="24" :sm="12" :md="8" :lg="4">
+                <NuxtLink to="/products/detail">
+                  <a-card class="mx-1" hoverable>
+                    <img
+                      style="width: 100%; height: 100%"
+                      slot="cover"
+                      alt="example"
+                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
+                    />
+                    <a-card-meta title="Europe Street beat">
+                      <template slot="description">
+                        www.instagram.com
+                      </template>
+                    </a-card-meta>
+                  </a-card>
+                </NuxtLink>
+              </a-col>
+              <a-col :xs="24" :sm="12" :md="8" :lg="4">
                 <NuxtLink to="/products/detail">
                   <a-card class="mx-1" hoverable>
                     <img
@@ -78,7 +95,7 @@
                   </a-card>
                 </NuxtLink>
               </a-col>
-              <a-col :span="4">
+              <a-col :xs="24" :sm="12" :md="8" :lg="4">
                 <NuxtLink to="/products/detail">
                   <a-card class="mx-1" hoverable>
                     <img
@@ -94,7 +111,7 @@
                   </a-card>
                 </NuxtLink>
               </a-col>
-              <a-col :span="4">
+              <a-col :xs="24" :sm="12" :md="8" :lg="4">
                 <NuxtLink to="/products/detail">
                   <a-card class="mx-1" hoverable>
                     <img
@@ -110,7 +127,7 @@
                   </a-card>
                 </NuxtLink>
               </a-col>
-              <a-col :span="4">
+              <a-col :xs="24" :sm="12" :md="8" :lg="4">
                 <NuxtLink to="/products/detail">
                   <a-card class="mx-1" hoverable>
                     <img
@@ -126,223 +143,7 @@
                   </a-card>
                 </NuxtLink>
               </a-col>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-            </a-row>
-          </a-card>
-          <a-card title="Product Name" :bordered="true">
-            <a-row>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-            </a-row>
-          </a-card>
-          <a-card title="Product Name" :bordered="true">
-            <a-row>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-              <a-col :span="4">
-                <NuxtLink to="/products/detail">
-                  <a-card class="mx-1" hoverable>
-                    <img
-                      slot="cover"
-                      alt="example"
-                      src="https://myhartono.com/images/thumbnails/80/80/detailed/288/RMX2020_3-32_RED.jpg"
-                    />
-                    <a-card-meta title="Europe Street beat">
-                      <template slot="description">
-                        www.instagram.com
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </NuxtLink>
-              </a-col>
-              <a-col :span="4">
+              <a-col :xs="24" :sm="12" :md="8" :lg="4">
                 <NuxtLink to="/products/detail">
                   <a-card class="mx-1" hoverable>
                     <img
