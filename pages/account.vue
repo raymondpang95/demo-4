@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Account</h2>
-    <a-card>
+    <a-card :bordered="false">
       <a-row>
         <a-col :span="24">
           <a-form layout="vertical" :form="form" @submit="handleSubmit">
@@ -108,7 +108,9 @@
             </a-form-item>
 
             <a-form-item>
-              <a-button type="primary" html-type="submit"> Update </a-button>
+              <a-button class="xs-w-100" type="primary" html-type="submit">
+                Update
+              </a-button>
             </a-form-item>
           </a-form>
         </a-col>

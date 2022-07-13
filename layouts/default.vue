@@ -1,19 +1,13 @@
 <template>
-  <div>
+  <div class="default">
     <a-layout id="components-layout-demo-top-side-2">
       <a-layout-header class="header">
         <div type="flex" justify="center" align="middle"></div>
       </a-layout-header>
 
       <a-layout>
-        <div class="m-auto content">
-          <a-layout-content
-            :style="{
-              margin: 0,
-              minHeight: '800px',
-              width: '1200px',
-            }"
-          >
+        <div class="m-auto">
+          <a-layout-content class="content" :style="{}">
             <nuxt></nuxt>
           </a-layout-content>
         </div>
@@ -27,7 +21,20 @@ export default {}
 </script>
 
 <style lang="scss">
+.default {
+  overflow: hidden;
+  width: 100%;
+}
 .border {
-  border: solid #fff 1px;
+  // border: solid red 1px;
+}
+
+.content {
+  margin: 0;
+  min-height: 800px;
+  width: 1200px;
+  @media only screen and (max-width: 576px) {
+    width: 100px;
+  }
 }
 </style>

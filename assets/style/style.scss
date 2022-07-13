@@ -1,5 +1,46 @@
 $space: 8px;
 
+// $container-sm-max-width: 100%; //Default 100%
+// $container-md-max-width: 768px; //Default 768px
+// $container-lg-max-width: 992px; //Default 992px
+// $container-xl-max-width: 1200px; //Default 1200px
+
+/* Breakpoint */
+$min-xs: 1 !default;
+$max-xs: 420 !default;
+$min-sm: 421 !default;
+$max-sm: 768 !default;
+$min-md: 769 !default;
+$max-md: 1024 !default;
+$min-lg: 1025 !default;
+$max-lg: 1364 !default;
+$min-xl: 1365 !default;
+$max-xl: 9999 !default;
+
+//follow bootstrap naming conventions
+$breakpoint-up-xs: '(min-width: ' + $min-xs + 'px)';
+$breakpoint-up-sm: '(min-width: ' + $min-sm + 'px)';
+$breakpoint-up-md: '(min-width: ' + $min-md + 'px)';
+$breakpoint-up-lg: '(min-width: ' + $min-lg + 'px)';
+$breakpoint-up-xl: '(min-width: ' + $min-xl + 'px)';
+
+$breakpoint-down-xs: '(max-width: ' + $max-xs + 'px)';
+$breakpoint-down-sm: '(max-width: ' + $max-sm + 'px)';
+$breakpoint-down-md: '(max-width: ' + $max-md + 'px)';
+$breakpoint-down-lg: '(max-width: ' + $max-lg + 'px)';
+$breakpoint-down-xl: '(max-width: ' + $max-xl + 'px)';
+
+$breakpoint-only-xs: '(min-width: ' + $min-xs + 'px) and (max-width: ' + $max-xs +
+  'px)';
+$breakpoint-only-sm: '(min-width: ' + $min-sm + 'px) and (max-width: ' + $max-sm +
+  'px)';
+$breakpoint-only-md: '(min-width: ' + $min-md + 'px) and (max-width: ' + $max-md +
+  'px)';
+$breakpoint-only-lg: '(min-width: ' + $min-lg + 'px) and (max-width: ' + $max-lg +
+  'px)';
+$breakpoint-only-xl: '(min-width: ' + $min-xl + 'px) and (max-width: ' + $max-xl +
+  'px)';
+
 @mixin paddingMargin($bp) {
   @for $i from 0 through 15 {
     .#{$bp}m-#{$i} {
@@ -121,3 +162,117 @@ $space: 8px;
 }
 
 @include paddingMargin('');
+
+@mixin gridInitialize($gridNum) {
+  @for $i from 1 through 12 {
+    .#{$gridNum}col-#{$i} {
+      flex: 0 0 ($i/12 * 100%);
+      max-width: ($i/12 * 100%);
+    }
+  }
+}
+
+@mixin widthGenerator($bp) {
+  @for $a from 1 through 100 {
+    @if $a % 10 == 0 {
+      .#{$bp}w-#{$a} {
+        width: $a * 1% !important;
+      }
+    }
+  }
+}
+
+@mixin heightGenerator($bp) {
+  @for $a from 1 through 100 {
+    @if $a % 10 == 0 {
+      .#{$bp}h-#{$a} {
+        height: $a * 1% !important;
+      }
+    }
+  }
+}
+
+/* Width */
+@include widthGenerator('');
+
+@media #{$breakpoint-down-lg} {
+  @include widthGenerator(lg-);
+}
+@media #{$breakpoint-down-md} {
+  @include widthGenerator(md-);
+}
+@media #{$breakpoint-down-sm} {
+  @include widthGenerator(sm-);
+}
+@media #{$breakpoint-down-xs} {
+  @include widthGenerator(xs-);
+}
+/* Width */
+
+/* Height */
+@include heightGenerator('');
+
+@media #{$breakpoint-down-lg} {
+  @include heightGenerator(lg-);
+}
+@media #{$breakpoint-down-md} {
+  @include heightGenerator(md-);
+}
+@media #{$breakpoint-down-sm} {
+  @include heightGenerator(sm-);
+}
+@media #{$breakpoint-down-xs} {
+  @include heightGenerator(xs-);
+}
+/* Height */
+
+/* Padding & Margin */
+@include paddingMargin('');
+
+@media #{$breakpoint-down-lg} {
+  @include paddingMargin(lg-);
+}
+@media #{$breakpoint-down-md} {
+  @include paddingMargin(md-);
+}
+@media #{$breakpoint-down-sm} {
+  @include paddingMargin(sm-);
+}
+@media #{$breakpoint-down-xs} {
+  @include paddingMargin(xs-);
+}
+/* Padding & Margin */
+
+/* Grid-system */
+@include gridInitialize('');
+
+@media #{$breakpoint-up-sm} {
+  @include gridInitialize(sm-);
+}
+
+@media #{$breakpoint-up-md} {
+  @include gridInitialize(md-);
+}
+
+@media #{$breakpoint-up-lg} {
+  @include gridInitialize(lg-);
+}
+
+@media #{$breakpoint-up-xl} {
+  @include gridInitialize(xl-);
+}
+/* Grid-system */
+
+@media only screen and (max-width: 576px) {
+  .xs-w-100 {
+    width: 100%;
+  }
+}
+
+body {
+  background-color: #f5f5f5 !important;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 800px !important;
+}

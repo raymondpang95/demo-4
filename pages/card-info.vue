@@ -1,27 +1,33 @@
 <template>
-  <div class="py-8">
-    <a-card title="Credit / Debit Card">
+  <div class="py-8 xs-py-2">
+    <a-card class="my-1" title="Credit / Debit Card" :bordered="false">
       <a-button slot="extra" type="primary" @click="showModal">
         Add New Card
       </a-button>
     </a-card>
 
-    <a-card>
+    <a-card :bordered="false">
       <a-row>
-        <a-col :span="4">
+        <a-col :xs="4" :sm="4" :md="4" :lg="4">
           <img
             style="width: 80px; height: 80px; display: block"
             class="m-auto"
             src="https://thefinanser.com/wp-content/uploads/2021/09/bank.jpeg"
           />
         </a-col>
-        <a-col style="text-align: left" :span="14">
-          <div>Bank Name</div>
-          <div>User Name</div>
+        <a-col style="text-align: center" :xs="16" :sm="16" :md="16" :lg="16">
+          <a-row>
+            <a-col :xs="24" :sm="24" :md="8" :lg="24">
+              <div>may bank</div>
+            </a-col>
+            <a-col :xs="24" :sm="24" :md="8" :lg="24">
+              <div>peter tan</div>
+            </a-col>
+            <a-col :xs="24" :sm="24" :md="8" :lg="24">*1234</a-col>
+          </a-row>
         </a-col>
-        <a-col :span="3">*1234</a-col>
-        <a-col style="text-align: center" :span="3">
-          <a-button>Delete</a-button>
+        <a-col style="text-align: center" :xs="4" :sm="4" :md="4" :lg="4">
+          <a-button type="link" block> Delete </a-button>
         </a-col>
       </a-row>
     </a-card>
